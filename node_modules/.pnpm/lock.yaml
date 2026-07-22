@@ -35,13 +35,25 @@ importers:
         specifier: workspace:*
         version: link:../core
 
-  packages/procedures: {}
+  packages/persistence: {}
 
-  packages/provenance: {}
+  packages/procedures:
+    dependencies:
+      '@subservable/core':
+        specifier: workspace:*
+        version: link:../core
 
-  packages/runtime: {}
+  packages/provenance:
+    dependencies:
+      '@subservable/core':
+        specifier: workspace:*
+        version: link:../core
 
-  packages/storage: {}
+  packages/runtime:
+    dependencies:
+      '@subservable/core':
+        specifier: workspace:*
+        version: link:../core
 
 packages:
 
