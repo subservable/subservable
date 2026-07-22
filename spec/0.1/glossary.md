@@ -198,3 +198,23 @@ Edges represent dependency relationships.
 A deterministic representation used before hashing.
 
 Canonical serialization ensures identical content produces identical identifiers.
+
+---
+
+## Executable Notation
+
+A public grammar that maps the formal specification directly onto code-like expressions.
+
+Executable notation preserves the same meaning as the mathematical model while making the model readable as runnable-style syntax.
+
+Both notation and English forms MAY be first-class, provided they remain semantically equivalent.
+
+---
+
+## Visual Reasoning
+
+The use of visual representations as direct projections of the model for inspection, debugging, and explanation.
+
+Visual reasoning is first-class when diagrams, symbols, and confidence cues preserve the same semantic relationships as the specification.
+
+Visual reasoning MUST NOT introduce a separate meaning from the model it depicts.

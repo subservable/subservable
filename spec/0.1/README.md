@@ -15,8 +15,8 @@ The v0.1 [specification] defines:
 - [provenance](glossary.md#Provenance),
 - [collections](glossary.md#Collection),
 - [conceptual interpretation layers](glossary.md#Prism).
-- [executable-notation]
-- [visual-reasoning]
+- [executable-notation](glossary.md#executable-notation)
+- [visual-reasoning](glossary.md#visual-reasoning)
 - [semantic-isomorphism](glossary.md#semantic-isomorphism)
 
 Implementation details are intentionally excluded.
