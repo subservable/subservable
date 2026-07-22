@@ -50,7 +50,7 @@ artifact\_id=hash(A)
 
 Identity MUST be independent of:
 
-- storage location,
+- persistence location,
 - database identifier,
 - provenance metadata.
 
@@ -98,6 +98,6 @@ Artifact B
 
 The Artifact layer MUST remain independent from:
 
-- storage engine,
+- persistence engine,
 - procedure implementation,
 - user interface.

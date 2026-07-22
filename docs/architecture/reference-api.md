@@ -8,6 +8,9 @@ The reference implementation SHOULD expose the smallest possible surface.
 
 Implementation details remain internal.
 
+Code examples use camelCase field names.
+Mathematical and specification notation may use snake_case.
+
 ---
 
 # Design Principle
@@ -30,10 +33,19 @@ interface Observation {
 }
 ```
 
----
+## Artifact
+
+```typescript
+interface Artifact<Representation = unknown> {
+  id: string;
+  representation: Representation;
+  uncertainty: unknown;
+}
+```
+
 ## Provenance
 
-```
+```typescript
 interface Provenance {
   inputRefs: string[];
   procedureId: string;
@@ -46,18 +58,29 @@ interface Provenance {
 }
 ```
 
+## Collection
+
+```typescript
+interface Collection {
+  id: string;
+  memberRefs: string[];
+  metadata?: Record<string, unknown>;
+}
+```
+
 ---
 
 # Procedure Interface
 
-```
+```typescript
 interface Procedure<
   Input,
   Output,
   Parameters
 > {
-
   id(): string;
+
+  uncertaintyModel(): unknown;
 
   execute(
     input: Input,
@@ -73,34 +96,32 @@ interface Procedure<
 
 # Runtime Interface
 
-```
+```typescript
 interface ProcedureRuntime {
-
   execute<P extends Procedure<any, any, any>>(
     procedure: P,
     input: unknown,
     parameters: unknown
-  ):
-    {
-      artifact: Artifact;
-      provenance: Provenance;
-    };
-
+  ): {
+    artifact: Artifact;
+    provenance: Provenance;
+  };
 }
 ```
 
 ---
 
-# Storage Boundary
+# Persistence Boundary
 
-Storage is intentionally abstract.
+Persistence is intentionally abstract.
 
 The API SHOULD depend on:
 
-```
-ArtifactStore
-ObservationStore
-ProvenanceStore
+```typescript
+ArtifactPersistence
+ObservationPersistence
+ProvenancePersistence
+CollectionPersistence
 ```
 
 rather than specific databases.
@@ -112,10 +133,11 @@ rather than specific databases.
 The first implementation SHOULD support:
 
 1. Store immutable observations.
-2. Execute deterministic procedures.
-3. Produce artifacts.
-4. Generate provenance.
-5. Reproduce identical outputs.
+2. Store immutable collections.
+3. Execute deterministic procedures.
+4. Produce artifacts.
+5. Generate provenance.
+6. Reproduce identical outputs.
 
 ---
 
@@ -124,12 +146,7 @@ The first implementation SHOULD support:
 The first implementation does not require:
 
 - distributed consensus,
-- blockchain storage,
+- blockchain persistence,
 - machine learning,
 - visualization,
 - user interfaces.
-
-```
-
----
-```

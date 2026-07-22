@@ -53,7 +53,7 @@ observation\_id=hash(M)
 
 Identity MUST NOT depend on:
 
-- storage location,
+- persistence location,
 - database identifiers,
 - insertion order.
 

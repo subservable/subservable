@@ -49,12 +49,13 @@ subservable/
 ├── packages/
 
 │ ├── core/  
+│ ├── collections/  
 │ ├── artifacts/  
 │ ├── provenance/  
 │ ├── observations/  
 │ ├── procedures/  
 │ ├── runtime/  
-│ └── storage/
+│ └── persistence/
 
 ├── tests/
 
@@ -82,6 +83,23 @@ Responsibilities:
 Dependencies:
 
 None.
+
+---
+
+## collections
+
+Responsible for immutable collection values.
+
+Responsibilities:
+
+- group resources,
+- validate membership,
+- preserve collection identity.
+
+Depends on:
+
+core
+
 
 ---
 
@@ -178,15 +196,16 @@ procedures
 
 ---
 
-## storage
+## persistence
 
 Responsible for persistence boundaries.
 
 Responsibilities:
 
-- observation storage,
-- artifact storage,
-- provenance storage.
+- collection persistence,
+- observation persistence,
+- artifact persistence,
+- provenance persistence.
 
 The first implementation MAY be in-memory.
 
@@ -360,7 +379,7 @@ Implement:
 
 - immutable observations,
 - observation identity,
-- storage interface.
+- persistence interface.
 
 Tests required.
 

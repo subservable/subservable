@@ -2,7 +2,8 @@
 # Specification 
 ## Version 0.1
 
-This directory contains the frozen foundational [specification].
+This directory contains the frozen foundational [specification] baseline.
+Normative changes are carried forward into later revisions.
 
 The v0.1 [specification] defines:
 
@@ -12,10 +13,11 @@ The v0.1 [specification] defines:
 - [artifacts](glossary.md#Artifact),
 - [uncertainty](glossary.md#Uncertainty),
 - [provenance](glossary.md#Provenance),
+- [collections](glossary.md#Collection),
 - [conceptual interpretation layers](glossary.md#Prism).
 - [executable-notation]
 - [visual-reasoning]
-- [projection-invariance](glossary.md#projection-invariance)
+- [semantic-isomorphism](glossary.md#semantic-isomorphism)
 
 Implementation details are intentionally excluded.
 

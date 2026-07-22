@@ -139,9 +139,27 @@ Prism\subseteq\mathcal{F}
 
 ---
 
-## Projection Invariance
+## Collection
 
-Every representation of a model—formal specification, executable API, visualization, logs, Markdown, or future integrations—should preserve the same semantic relationships. Changing the projection must not change the meaning.
+An immutable value that groups references to observations, artifacts, provenance records, and other collections.
+
+Represented by:
+
+\[
+C
+\]
+
+Collections are content-addressable, never mutable, and may be nested.
+
+---
+
+## Semantic Isomorphism
+
+Every representation of a model—formal specification, executable API, visualization, logs, Markdown, or future integrations—should preserve the same semantic relationships.
+
+Changing the projection must not change the meaning.
+
+Projection is terminology for a rendering of the model, not a separate principle.
 
 ## Discovery
 

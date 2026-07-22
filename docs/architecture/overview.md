@@ -14,13 +14,14 @@ It does not define implementation details.
 
 # Design Principles
 
-Subservable is built around five foundational principles:
+Subservable is built around six foundational principles:
 
 1. Immutable observations
 2. Deterministic procedures
 3. Reproducible artifacts
 4. Explicit provenance
 5. Composable transformations
+6. Immutable collections
 
 ---
 
@@ -36,9 +37,9 @@ The architecture is divided into layers.
 +------------------------------------------------+
 |           Procedure Runtime Layer              |
 +------------------------------------------------+
-| Artifact | Provenance | Observation Services   |
+| Collection | Artifact | Provenance | Observation Services |
 +------------------------------------------------+
-|             Immutable Storage                  |
+|             Immutable Persistence              |
 +------------------------------------------------+
 
 ```
@@ -54,6 +55,16 @@ Responsible for:
 - preserving immutability,
 - assigning identity,
 - providing retrieval.
+
+---
+
+## Collection Layer
+
+Responsible for:
+
+- grouping immutable resources,
+- preserving membership history through new collection values,
+- providing collection retrieval.
 
 ---
 

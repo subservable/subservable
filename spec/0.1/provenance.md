@@ -39,6 +39,8 @@ Provenance = {
 }
 ```
 
+In code, these names map to idiomatic camelCase fields such as `inputRefs` and `procedureId`.
+
 ---
 
 

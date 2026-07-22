@@ -10,16 +10,19 @@ Decision:
 
 ## decision flow
 
-When a decision is accepted:
-Specification changes → update spec/0.1
+Status is authoritative.
+Proposal is advisory.
+Decision records the final chosen outcome.
+
+When a decision is accepted or modified:
+Specification changes → queue the next spec revision
 Architecture changes → update docs/architecture
 Roadmap changes → update docs/roadmap
-Implementation changes → update impl-plan.md
+Implementation changes → update docs/architecture/implementation-plan.md
 Nothing else changes.
 
-
 PD-001 — Rename storage → persistence
-Status: Proposed
+Status: Accepted
 Rationale
 Storage implies a specific implementation.
 Persistence is the capability.
@@ -39,13 +42,13 @@ Persistence
 ├── Blockchain
 ```
 
-Recommendation
-Accepted
+Decision
+Rename storage to persistence.
 
 ---
 
 PD-002 — Dual Public Grammar
-Status: Proposed
+Status: Accepted
 Public API has two equivalent grammars.
 English
 ```
@@ -68,13 +71,13 @@ Artifact.of
 Neither owns semantics.
 Both produce identical immutable values.
 
-Recommendation
-Accepted
+Decision
+Keep both grammars as first-class, equivalent APIs.
 
 ---
 
 PD-003 — Executable Notation
-Status: Proposed
+Status: Accepted
 The mathematical specification should map directly onto executable code.
 The implementation is the notation hydrated with meaningful names.
 Example
@@ -85,14 +88,16 @@ const A =
     Artifact.of
         .R(featureVector)
         .U(confidenceBounds);
-Recommendation
-Accept
+
+Decision
+Make the notation executable.
+
 I think this is one of the defining ideas of Subservable.
 
 ---
 
 PD-004 — Semantic Isomorphism
-Status: Proposed
+Status: Accepted
 Every representation should preserve semantics.
 Representations include
 Specification
@@ -103,20 +108,22 @@ Diagrams
 Logs
 Markdown
 Changing representation must not change meaning.
-Recommendation
-Accept
+
+Decision
+Preserve meaning across all projections.
 
 I would actually elevate this to an architectural principle.
 
 ---
 
 PD-005 — Projection Invariance
-Status: Proposed
+Status: Modified
 Every representation is a projection.
 No representation owns the truth.
 The immutable model is canonical.
-Recommendation
-Modify
+
+Decision
+Merge into Semantic Isomorphism and keep projection as terminology.
 
 I think this overlaps heavily with PD-004.
 My recommendation is:
@@ -126,19 +133,20 @@ use "Projection" as terminology rather than a separate principle
 ---
 
 PD-006 — Visual Language
-Status: Proposed
+Status: Accepted
 Visual representations are first-class.
 Not documentation.
 Not screenshots.
 Not UML.
 Executable projections of the model.
-Recommendation
-Accept
+
+Decision
+Treat visual language as a first-class executable projection.
 
 ---
 
 PD-007 — Collections
-Status: Proposed
+Status: Accepted
 Collections become immutable values.
 Not folders.
 Not containers.
@@ -162,13 +170,14 @@ git repository
 
 distributed archive
 without changing abstractions.
-Recommendation
-Accept
+
+Decision
+Add immutable collections as a first-class model concept.
 
 ---
 
 PD-008 — Currying for Notation Grammar
-Status: Proposed
+Status: Accepted
 English API remains conventional.
 Notation API uses staged construction.
 Example
@@ -181,14 +190,14 @@ Artifact.of
     .U(confidenceInterval95);
 mirroring
 A=(R,U)
-Recommendation
-Accept, with one refinement:
-Only the notation grammar should use staged construction. The English grammar should remain direct and idiomatic.
+
+Decision
+Limit staged construction to notation grammar; keep English grammar direct and idiomatic.
 
 ---
 
 PD-009 — Debug Visualizations
-Status: Proposed
+Status: Accepted
 Logs, CLI output, and future tooling should reuse the visual language.
 Example
 ● Observation
@@ -202,5 +211,6 @@ Example
 ◆ Artifact
 instead of
 Created observation...
-Recommendation
-Accept
+
+Decision
+Reuse the visual language in diagnostics and tooling.

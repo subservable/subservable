@@ -12,6 +12,7 @@ This document defines shared notation used across Subservable specifications.
 | \(R\) | Derived representation |
 | \(U\) | Uncertainty associated with representation |
 | \(P\) | Provenance record |
+| \(C\) | Immutable collection |
 | \(\Omega\) | Spectrum representation |
 | \(f_U\) | Uncertainty propagation procedure |
 
