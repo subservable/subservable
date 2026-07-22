@@ -28,6 +28,7 @@ Subservable is built around five foundational principles:
 
 The architecture is divided into layers.
 
+```text
 +------------------------------------------------+
 |                Applications                    |
 +------------------------------------------------+
@@ -40,7 +41,7 @@ The architecture is divided into layers.
 |             Immutable Storage                  |
 +------------------------------------------------+
 
-
+```
 ---
 
 # Core Components
@@ -90,6 +91,8 @@ Responsible for:
 # Data Flow
 
 The primary execution path:
+
+```text
 Observation
       |
       v
@@ -100,7 +103,7 @@ Artifact
       |
       v
 Provenance Record
-
+```
 
 ---
 

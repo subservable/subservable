@@ -10,6 +10,7 @@ The Provenance subsystem records how artifacts are derived.
 
 Provenance forms a directed acyclic graph.
 
+```text
 Observation
      |
      v
@@ -23,7 +24,7 @@ Procedure
      |
      v
 Artifact B
-
+```
 
 ---
 
@@ -33,21 +34,27 @@ The graph contains:
 
 ## Artifact Nodes
 
+```text
 Represent:
 
 \[
 A=(R,U)
 \]
 
+```
+
 ---
+
 
 ## Procedure Nodes
 
 Represent:
 
+```text
 \[
 f
 \]
+```
 
 including:
 
@@ -86,16 +93,19 @@ New derivations create new graph nodes.
 
 Composition:
 
+```text
 \[
 f_2(f_1(M))
 \]
+```
 
 creates:
 
+```text
 Artifact B  
 |  
 +-- parent --> Artifact A
-
+```
 
 ---
 
