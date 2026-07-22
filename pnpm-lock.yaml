@@ -25,7 +25,11 @@ importers:
 
   packages/core: {}
 
-  packages/observations: {}
+  packages/observations:
+    dependencies:
+      '@subservable/core':
+        specifier: workspace:*
+        version: link:../core
 
   packages/procedures: {}
 
