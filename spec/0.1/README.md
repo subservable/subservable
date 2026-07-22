@@ -7,15 +7,15 @@ This directory contains the frozen foundational [specification].
 The v0.1 [specification] defines:
 
 
-- [immutable](glossary#Immutability) [observations](glossary#Observation),
-- [deterministic](glossary#Determinism) [procedures](glossary#Procedure),
-- [artifacts](glossary#Artifact),
-- [uncertainty](glossary#Uncertainty),
-- [provenance](glossary#Provenance),
-- [conceptual interpretation layers](glossary#Prism).
+- [immutable](f#Immutability) [observations](glossary.md#Observation),
+- [deterministic](glossary.md#Determinism) [procedures](glossary.md#Procedure),
+- [artifacts](glossary.md#Artifact),
+- [uncertainty](glossary.md#Uncertainty),
+- [provenance](glossary.md#Provenance),
+- [conceptual interpretation layers](glossary.md#Prism).
 - [executable-notation]
 - [visual-reasoning]
-- [projection-invariance](glossary#projection-invariance)
+- [projection-invariance](glossary.md#projection-invariance)
 
 Implementation details are intentionally excluded.
 
