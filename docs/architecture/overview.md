@@ -1,10 +1,10 @@
-# Subservable Architecture Overview
+# Architecture Overview
 
 ## Status
 
-Architecture Document v0.1
+Architecture Document [v0.1](../../spec/0.1/README.md)
 
-This document describes the intended architecture derived from the Subservable Specification v0.1.
+This document describes the intended architecture derived from specification [v0.1](../../spec/0.1/README.md).
 
 The architecture defines system organization and boundaries.
 
@@ -109,7 +109,7 @@ Provenance Record
 
 # Multiple projections
 
-```
+```text
 Specification
         │
         ▼
