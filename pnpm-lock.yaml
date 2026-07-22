@@ -21,7 +21,11 @@ importers:
         specifier: ^3
         version: 3.2.7(@types/node@26.1.1)
 
-  packages/artifacts: {}
+  packages/artifacts:
+    dependencies:
+      '@subservable/core':
+        specifier: workspace:*
+        version: link:../core
 
   packages/core: {}
 

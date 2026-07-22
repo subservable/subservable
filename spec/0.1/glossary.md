@@ -139,6 +139,10 @@ Prism\subseteq\mathcal{F}
 
 ---
 
+## Projection Invariance
+
+Every representation of a model—formal specification, executable API, visualization, logs, Markdown, or future integrations—should preserve the same semantic relationships. Changing the projection must not change the meaning.
+
 ## Discovery
 
 The attribution of meaning to reproducible structure.

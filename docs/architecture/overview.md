@@ -107,6 +107,25 @@ Provenance Record
 
 ---
 
+# Multiple projections
+
+```
+Specification
+        │
+        ▼
+Immutable Model
+   ├── Mathematics
+   ├── English API
+   ├── Visualization
+   ├── Markdown
+   └── Runtime
+```
+
+Everything is a projection of the same immutable model.
+No projection owns the truth.
+
+---
+
 # Non-Goals
 
 The architecture does not prescribe:
