@@ -2,8 +2,8 @@
 # Specification 
 ## Version 0.1
 
-This directory contains the frozen foundational [specification] baseline.
-Normative changes are carried forward into later revisions.
+This directory contains the foundational [specification] baseline.
+Accepted decisions are incorporated here in place.
 
 The v0.1 [specification] defines:
 
@@ -15,8 +15,8 @@ The v0.1 [specification] defines:
 - [provenance](glossary.md#Provenance),
 - [collections](glossary.md#Collection),
 - [conceptual interpretation layers](glossary.md#Prism).
-- [executable-notation](glossary.md#executable-notation)
-- [visual-reasoning](glossary.md#visual-reasoning)
+- [executable-notation](glossary.md#Executable-Notation)
+- [visual-reasoning](glossary.md#Visual-Reasoning)
 - [semantic-isomorphism](glossary.md#semantic-isomorphism)
 
 Implementation details are intentionally excluded.

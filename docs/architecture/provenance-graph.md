@@ -109,6 +109,6 @@ Artifact B
 
 ---
 
-# Storage Independence
+# Persistence Independence
 
 The graph model MUST NOT assume a specific persistence technology.

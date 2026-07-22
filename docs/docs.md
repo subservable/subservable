@@ -15,7 +15,7 @@ Proposal is advisory.
 Decision records the final chosen outcome.
 
 When a decision is accepted or modified:
-Specification changes → queue the next spec revision
+Specification changes → update spec/0.1 in place
 Architecture changes → update docs/architecture
 Roadmap changes → update docs/roadmap
 Implementation changes → update docs/architecture/implementation-plan.md
