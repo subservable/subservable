@@ -8,15 +8,15 @@ Accepted decisions are incorporated here in place.
 The v0.1 [specification] defines:
 
 
-- [immutable](glossary.md#Immutability) [observations](glossary.md#Observation),
-- [deterministic](glossary.md#Determinism) [procedures](glossary.md#Procedure),
-- [artifacts](glossary.md#Artifact),
-- [uncertainty](glossary.md#Uncertainty),
-- [provenance](glossary.md#Provenance),
-- [collections](glossary.md#Collection),
-- [conceptual interpretation layers](glossary.md#Prism).
-- [executable-notation](glossary.md#Executable-Notation)
-- [visual-reasoning](glossary.md#Visual-Reasoning)
+- [immutable](glossary.md#immutability) [observations](glossary.md#observation),
+- [deterministic](glossary.md#determinism) [procedures](glossary.md#procedure),
+- [artifacts](glossary.md#artifact),
+- [uncertainty](glossary.md#uncertainty),
+- [provenance](glossary.md#provenance),
+- [collections](glossary.md#collection),
+- [conceptual interpretation layers](glossary.md#prism).
+- [executable-notation](glossary.md#executable-notation)
+- [visual-reasoning](glossary.md#visual-reasoning)
 - [semantic-isomorphism](glossary.md#semantic-isomorphism)
 
 Implementation details are intentionally excluded.

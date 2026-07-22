@@ -348,6 +348,21 @@ Reproduce Result
 
 # 7. Milestones
 
+## Current Phase
+
+Milestone 4 — Provenance System
+
+The current implementation phase is provenance.
+
+This phase should establish:
+
+- provenance records,
+- parent relationships,
+- validation,
+- content-addressed derivation history.
+
+---
+
 ## Milestone 0 — Repository Foundation
 
 Deliver:
@@ -398,6 +413,8 @@ Tests required.
 ---
 
 ## Milestone 4 — Provenance System
+
+Active phase.
 
 Implement:
 
