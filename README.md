@@ -4,6 +4,6 @@
 
 ---
 ## Documentation
-#### [overview](docs/architecture/overview)
+#### [overview](docs/architecture/overview.md)
 ### Specs
-#### [0.1](spec/0.1/subservable)
+#### [0.1](spec/0.1/subservable.md)
