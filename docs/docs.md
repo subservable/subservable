@@ -214,3 +214,38 @@ Created observation...
 
 Decision
 Reuse the visual language in diagnostics and tooling.
+
+---
+
+PD-011 — Composition Over Helpers
+Status: Accepted
+Principle
+Every transformation should represent exactly one semantic operation.
+Composition is explicit.
+Behavior is never hidden behind convenience helpers.
+
+Good
+
+```
+const canonical = canonicalize(value);
+const id = hash(canonical);
+
+return deepFreeze({
+    id,
+    value,
+});
+```
+
+Avoid
+
+```
+return createImmutableThing(value);
+```
+
+The second hides three independent concepts:
+canonicalization
+identity
+immutability
+Those concepts already exist in the specification and should remain visible in the implementation.
+
+---
