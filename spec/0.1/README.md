@@ -7,7 +7,7 @@ This directory contains the frozen foundational [specification].
 The v0.1 [specification] defines:
 
 
-- [immutable](f#Immutability) [observations](glossary.md#Observation),
+- [immutable](glossary.md#Immutability) [observations](glossary.md#Observation),
 - [deterministic](glossary.md#Determinism) [procedures](glossary.md#Procedure),
 - [artifacts](glossary.md#Artifact),
 - [uncertainty](glossary.md#Uncertainty),
