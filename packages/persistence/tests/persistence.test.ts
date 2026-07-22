@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-describe("storage", () => {
+describe("persistence", () => {
   it("loads", () => {
     expect(true).toBe(true);
   });

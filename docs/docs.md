@@ -40,7 +40,7 @@ Persistence
 ```
 
 Recommendation
-Accept
+Accepted
 
 ---
 
@@ -69,7 +69,7 @@ Neither owns semantics.
 Both produce identical immutable values.
 
 Recommendation
-Accept
+Accepted
 
 ---
 
