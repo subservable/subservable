@@ -10,6 +10,44 @@ The architecture defines system organization and boundaries.
 
 It does not define implementation details.
 
+## Philosophy
+
+> Notation is not an optimization; it is a primary interface.
+> Executable notation is a first-class public projection of the immutable model. It exists to preserve correspondence between the formal specification and the implementation, enabling the mathematics, code, and visual language to describe the same semantics without translation.
+
+We've been thinking in three dimensions:
+
+```
+Specification
+      ↓
+Architecture
+      ↓
+Implementation
+```
+
+Proposing another orthogonal representation:
+
+```
+           Mathematics
+
+                ▲
+
+English ◀── Model ──▶ Visual
+
+                ▼
+
+        Executable System
+```
+
+Each is a projection of the same underlying model.
+
+- **Mathematics** gives precision.
+- **English** gives accessibility.
+- **Visuals** give intuition.
+- **Code** gives execution.
+
+None is privileged over the others; each should be able to reconstruct the same model.
+
 ---
 
 # Design Principles
