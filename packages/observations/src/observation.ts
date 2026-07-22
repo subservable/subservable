@@ -1,11 +1,14 @@
-import { SHA256HashProvider, JsonSerializer } from "../../core/src/index.js";
+import {
+  SHA256HashProvider,
+  CanonicalJsonSerializer,
+} from "../../core/src/index.js";
 
 export interface Observation<T = unknown> {
   readonly id: string;
   readonly payload: T;
 }
 
-const serializer = new JsonSerializer<unknown>();
+const serializer = new CanonicalJsonSerializer();
 const hasher = new SHA256HashProvider();
 
 export function createObservation<T>(payload: T): Observation<T> {
