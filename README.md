@@ -6,4 +6,4 @@
 ## Documentation
 #### [overview](docs/architecture/overview.md)
 ### Specs
-#### [0.1](spec/0.1/subservable.md)
+#### [0.1](spec/0.1/README.md)
