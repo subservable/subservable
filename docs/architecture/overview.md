@@ -16,7 +16,7 @@ The following documents define the constitutional principles of Subservable:
 
 - [/docs/mission.md](/docs/mission.md)
 - [/docs/projection-architecture.md](/docs/projection-architecture.md)
-- [/docs/spec/:version/glossary.md](/docs/spec/0.1/glossary.md)
+- [/spec/:version/glossary.md](/spec/0.1/glossary.md)
 
 These documents are versioned and frozen.
 
