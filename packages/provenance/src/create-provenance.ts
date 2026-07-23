@@ -1,17 +1,20 @@
-export function createProvenance(...) {
-    const value = {
-        inputRefs,
-        procedureId,
-        outputRef,
-        parentRefs,
-    };
+import type {} from "./provenance.js";
+import * from "../../core/src/index.js";
+import { deepFreeze } from "@subservable/core";
 
-    const canonical = canonicalize(value);
+export interface CreateProvenanceOptions {
+  readonly inputRefs: readonly string[];
+  readonly procedureId: string;
+  readonly outputRef: string;
+  readonly parentRefs?: readonly string[];
+}
 
-    const id = hash(canonical);
-
-    return deepFreeze({
-        id,
-        ...value,
-    });
+export function createProvenance(options: CreateProvenanceOptions): Provenance {
+  return deepFreeze({
+    id,
+    inputRefs,
+    procedureId,
+    outputRef,
+    parentRefs: parentRefs ?? [],
+  });
 }

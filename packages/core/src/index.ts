@@ -1,6 +1,8 @@
 export * from "./identity/id.js";
 export * from "./identity/hash.js";
 
+export * from "./deep-freeze.js";
+
 export * from "./serialization/canonical.js";
 export * from "./serialization//canonical-json.js";
 
