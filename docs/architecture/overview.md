@@ -14,9 +14,9 @@ It does not define implementation details.
 
 The following documents define the constitutional principles of Subservable:
 
-- docs/mission.md
-- docs/projection-architecture.md
-- docs/spec/<version>/glossary.md
+- [/docs/mission.md](/docs/mission.md)
+- [/docs/projection-architecture.md](/docs/projection-architecture.md)
+- [/docs/spec/<version>/glossary.md](/docs/spec/<version>/glossary.md)
 
 These documents are versioned and frozen.
 
