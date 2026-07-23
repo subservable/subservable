@@ -1,27 +1,33 @@
 # Projection Architecture
 
-## Canonical Semantic Hierarchy
+## Purpose
+
+Subservable defines meaning exactly once.
+
+Every other representation is a projection of the same immutable semantics.
+
+Mathematics is the canonical language of the model.
+
+Every projection preserves those semantics while presenting them in a form appropriate for its medium.
+
+---
+
+# Canonical Projection Hierarchy
 
 ```text
-                           Immutable Model
-                      (Semantic Source of Truth)
-                                   │
-                                   ▼
-                     Mathematical Notation
-                        (Canonical Grammar)
-                                   │
-        ┌──────────────────────────┼──────────────────────────┐
-        │                          │                          │
-        ▼                          ▼                          ▼
- Executable Notation        Visual Grammar           Structural Serialization
- (TypeScript / Runtime)   (Diagrams / Debugger)       (JSON / Storage)
-                                   │
-                                   ▼
-                             Locale Layer
-        ┌─────────────┬─────────────┬─────────────┬─────────────┐
-        │             │             │             │             │
-        ▼             ▼             ▼             ▼             ▼
-     English       Español        日本語       Français        …
+                     Immutable Model
+                (Canonical Semantic Source)
+                              │
+                              ▼
+                  Mathematical Notation
+                     (Canonical Grammar)
+                              │
+      ┌──────────────┬──────────────┬──────────────┬──────────────┐
+      ▼              ▼              ▼              ▼
+ Executable      Visual         Structural        Locale
+  Notation       Grammar       Serialization    Projections
+(TypeScript)   (Diagrams)     (JSON / CBOR)   (English, Español,
+                                              日本語, Français, …)
 ```
 
 ---
@@ -30,13 +36,11 @@
 
 The mathematical notation defined by the specification is the canonical semantic representation of Subservable.
 
-All other representations are projections of that notation.
+Every other representation is derived from that notation.
 
-No projection introduces new meaning.
+The canonical grammar defines meaning.
 
-No projection removes meaning.
-
-Changing the projection **MUST NOT** change the semantics.
+Projections communicate meaning.
 
 ---
 
@@ -44,33 +48,41 @@ Changing the projection **MUST NOT** change the semantics.
 
 ## Executable Projection
 
-Executable notation expresses the canonical grammar as executable software.
+Executable notation renders the canonical grammar as executable software.
 
-Example:
+Examples include:
 
 - TypeScript
 - Runtime execution
 - Testing
+- Reference implementations
+
+The implementation should resemble the canonical notation as closely as practical.
+
+Implementation is an executable reading of the specification.
 
 ---
 
 ## Visual Projection
 
-Visual grammar expresses canonical relationships spatially.
+Visual grammar renders canonical relationships spatially.
 
 Examples include:
 
 - Diagrams
-- Timelines
 - Graphs
+- Timelines
+- Trees
 - Debugging views
 - Interactive visualizations
+
+Visual projections communicate structure without altering semantics.
 
 ---
 
 ## Structural Projection
 
-Structural serialization preserves immutable data for storage and transport.
+Structural serialization preserves canonical structure for storage and transport.
 
 Examples include:
 
@@ -80,13 +92,13 @@ Examples include:
 
 Serialization preserves structure.
 
-It does not define semantics.
+Serialization does not define semantics.
 
 ---
 
 ## Locale Projection
 
-Natural languages describe the canonical grammar for human readers.
+Locale projections communicate canonical semantics through natural language.
 
 Examples include:
 
@@ -97,20 +109,51 @@ Examples include:
 
 No locale is canonical.
 
-Locales communicate the same semantics through different linguistic systems.
+Every locale communicates the same semantics through a different linguistic system.
 
 ---
 
 # Semantic Isomorphism
 
-Every projection is expected to be semantically isomorphic to the canonical grammar.
+Every projection is expected to remain semantically isomorphic to the canonical grammar.
 
 Equivalent meaning should remain equivalent regardless of whether it is expressed as:
 
-- mathematics,
+- mathematical notation,
 - executable notation,
-- diagrams,
-- serialized data,
-- or natural language.
+- visual grammar,
+- serialized structure,
+- or localized natural language.
 
-The mathematical notation remains the single canonical source from which all projections are derived.
+A projection may introduce affordances appropriate to its medium provided those affordances do not alter canonical semantics.
+
+Examples include:
+
+- syntax highlighting,
+- animation,
+- color,
+- folding,
+- search,
+- interaction,
+- zoom,
+- accessibility features.
+
+These improve communication.
+
+They do not change meaning.
+
+---
+
+# Design Principle
+
+Subservable intentionally separates **meaning** from **representation**.
+
+The immutable model defines meaning.
+
+The canonical grammar formalizes meaning.
+
+Every projection faithfully communicates that meaning.
+
+Changing the projection changes only how information is experienced.
+
+It never changes what the information means.

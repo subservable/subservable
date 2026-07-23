@@ -10,6 +10,26 @@ The architecture defines system organization and boundaries.
 
 It does not define implementation details.
 
+## Constitutional Documents
+
+The following documents define the constitutional principles of Subservable:
+
+- docs/mission.md
+- docs/projection-architecture.md
+- docs/spec/<version>/glossary.md
+
+These documents are versioned and frozen.
+
+Changes to constitutional documents require:
+
+1. a new specification version,
+2. explicit rationale,
+3. review before implementation.
+
+Implementation evolves beneath the constitution.
+
+The constitution does not evolve to accommodate implementation.
+
 ## Philosophy
 
 > Notation is not an optimization; it is a primary interface.
@@ -27,24 +47,26 @@ Implementation
 
 Proposing another orthogonal representation:
 
+```text
+
+                     Immutable Model
+                 (Canonical Semantic Source)
+                              │
+                              ▼
+                  Mathematical Notation
+                     (Canonical Grammar)
+                              │
+      ┌──────────────┬──────────────┬──────────────┬──────────────┐
+      ▼              ▼              ▼              ▼
+ Executable      Visual         Structural      Locale
+  Notation       Grammar       Serialization   Projections
+(TypeScript)   (Diagrams)      (JSON/CBOR)    (English,…)
 ```
-           Mathematics
 
-                ▲
-
-English ◀── Model ──▶ Visual
-
-                ▼
-
-        Executable System
-```
-
-Each is a projection of the same underlying model.
-
-- **Mathematics** gives precision.
-- **English** gives accessibility.
-- **Visuals** give intuition.
-- **Code** gives execution.
+- **Mathematics** provides portability, precision & resonability
+- **Locale** provides accessibility
+- **Visual Grammar** provides intuition
+- **Code** provides execution
 
 None is privileged over the others; each should be able to reconstruct the same model.
 

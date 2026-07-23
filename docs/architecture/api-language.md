@@ -14,6 +14,41 @@ The API should read like a direct expression of the model.
 
 It should prefer small, explicit, immutable values over convenience wrappers that hide meaning.
 
+
+
+### Canonical Semantics
+
+The mathematical notation defined by the specification (ex: A = (R, U)) is the canonical semantic representation of the model. Every other representation—code, diagrams, serialization, logs, and natural language—is an isomorphic projection of that notation.
+
+### Every implementation becomes a proof.
+
+Instead of translating:
+
+```text
+Specification
+
+↓
+
+Locale
+
+↓
+
+Implementation
+```
+
+we get
+
+```text
+Specification
+
+↓
+
+Implementation
+```
+
+The (eventually localized) documentation explains it.
+The code **is** it.
+
 ---
 
 ## 2. Dual Grammar

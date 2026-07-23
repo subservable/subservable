@@ -24,3 +24,4 @@ Implementation details are intentionally excluded.
 The specification defines what implementations MUST satisfy.
 
 [Architecture documents](../../docs/architecture/reference-api.md) define how implementations SHOULD be structured.
+

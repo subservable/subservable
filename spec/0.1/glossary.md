@@ -201,6 +201,72 @@ Canonical serialization ensures identical content produces identical identifiers
 
 ---
 
+## Immutable Model
+
+The single, canonical semantic source from which every representation of Subservable is derived.
+
+The Immutable Model does not itself take a runnable or written form. It is formalized by the Canonical Grammar and communicated through every Projection.
+
+No projection owns the Immutable Model. Every projection preserves its semantics.
+
+---
+
+## Canonical Grammar
+
+The mathematical notation defined by the specification.
+
+The canonical grammar formalizes the Immutable Model and is the single semantic source from which every other representation — executable, visual, structural, or locale — is derived.
+
+The canonical grammar defines meaning. Projections communicate meaning.
+
+---
+
+## Projection
+
+Any representation derived from the Canonical Grammar.
+
+Projections include Executable Projection, Visual Projection, Structural Projection, and Locale Projection.
+
+A projection may introduce affordances appropriate to its medium — syntax highlighting, animation, color, folding, search, interaction, zoom, accessibility features — provided those affordances do not alter canonical semantics.
+
+Changing the projection must not change the meaning. See Semantic Isomorphism.
+
+---
+
+## Executable Projection
+
+The category of projections that render the Canonical Grammar as executable software, including TypeScript, runtime execution, testing, and reference implementations.
+
+Executable Notation is the specific grammar used within Subservable's public API to realize this projection.
+
+---
+
+## Visual Projection
+
+The category of projections that render canonical relationships spatially, including diagrams, graphs, timelines, trees, debugging views, and interactive visualizations.
+
+Visual Reasoning is the practice of using this projection for inspection, debugging, and explanation.
+
+Visual projections communicate structure without altering semantics.
+
+---
+
+## Structural Projection
+
+The category of projections that preserve canonical structure for storage and transport, including JSON, CBOR, and MessagePack.
+
+Structural projection preserves structure. It does not define semantics.
+
+---
+
+## Locale Projection
+
+The category of projections that communicate canonical semantics through natural language, including English, Español, 日本語, and Français.
+
+No locale is canonical. Every locale communicates the same semantics through a different linguistic system.
+
+---
+
 ## Executable Notation
 
 A public grammar that maps the formal specification directly onto code-like expressions.
@@ -208,6 +274,8 @@ A public grammar that maps the formal specification directly onto code-like expr
 Executable notation preserves the same meaning as the mathematical model while making the model readable as runnable-style syntax.
 
 Both notation and English forms MAY be first-class, provided they remain semantically equivalent.
+
+Executable Notation is the specific grammar instance of the Executable Projection category.
 
 ---
 
@@ -218,3 +286,5 @@ The use of visual representations as direct projections of the model for inspect
 Visual reasoning is first-class when diagrams, symbols, and confidence cues preserve the same semantic relationships as the specification.
 
 Visual reasoning MUST NOT introduce a separate meaning from the model it depicts.
+
+Visual Reasoning is the practice associated with the Visual Projection category.
