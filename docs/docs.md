@@ -249,3 +249,44 @@ immutability
 Those concepts already exist in the specification and should remain visible in the implementation.
 
 ---
+
+PD-012 — Projection Isomorphism
+Status: Accepted (Specification)
+This replaces the current one-sided definition.
+Normative Definition
+Let \(M\) be the canonical semantic model and let
+\[
+\pi_i : M \rightarrow R_i
+\]be a projection into representation \(R_i\).
+A projection is semantically isomorphic iff there exists an inverse
+\[
+\pi_i^{-1}:R_i\rightarrow M
+\]such that
+\[
+\forall m\in M,\qquad
+\pi_i^{-1}(\pi_i(m))=m
+\]and
+\[
+\forall r\in R_i,\qquad
+\pi_i(\pi_i^{-1}(r))=r.
+\]Equivalently,
+\[
+\pi_i^{-1}\circ\pi_i=\mathrm{id}_M
+\]and
+\[
+\pi_i\circ\pi_i^{-1}=\mathrm{id}_{R_i}.
+\]Notice what changed.
+We are not proving
+\[
+English \cong JSON
+\]or
+\[
+TypeScript \cong Diagram.
+\]Every representation is isomorphic through the canonical semantic model.
+That scales indefinitely.
+                Canonical Semantic Model
+                     /    |    |    \
+                    /     |    |     \
+          English  TS   JSON  Diagram  ...
+Every future representation satisfies the same theorem.
+

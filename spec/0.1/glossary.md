@@ -161,6 +161,65 @@ Changing the projection must not change the meaning.
 
 Projection is terminology for a rendering of the model, not a separate principle.
 
+
+## Mathematical Isomorphism
+
+Defines what it means for two representations to preserve semantics.
+This is independent of implementation.
+
+Think of it as a theorem:
+
+```
+Representation₁ ≅ Representation₂
+```
+
+iff there exists a lossless mapping:
+```
+φ : R₁ → R₂
+```
+
+and:
+
+```
+φ⁻¹(φ(R₁)) = R₁
+```
+
+## Projection Equivalence
+
+This belongs in testing.
+It proves the implementation satisfies the theorem.
+
+Example:
+```
+Notation Grammar
+
+↓
+
+Canonical Model
+
+↑
+
+English Grammar
+```
+
+Both normalize to exactly the same immutable value.
+This is observable behavior.
+
+The architecture becomes
+
+```
+Mathematical Isomorphism
+        │
+        ▼
+Projection Equivalence Tests
+        │
+        ▼
+Passing Implementation
+```
+
+The tests are evidence.
+The theorem is the definition.
+
 ## Discovery
 
 The attribution of meaning to reproducible structure.
@@ -245,7 +304,7 @@ Executable Notation is the specific grammar used within Subservable's public API
 
 The category of projections that render canonical relationships spatially, including diagrams, graphs, timelines, trees, debugging views, and interactive visualizations.
 
-Visual Reasoning is the practice of using this projection for inspection, debugging, and explanation.
+Visual Grammar is the notation system used to realize this projection. Visual Reasoning is the practice of applying that grammar for inspection, debugging, and explanation.
 
 Visual projections communicate structure without altering semantics.
 
@@ -264,6 +323,16 @@ Structural projection preserves structure. It does not define semantics.
 The category of projections that communicate canonical semantics through natural language, including English, Español, 日本語, and Français.
 
 No locale is canonical. Every locale communicates the same semantics through a different linguistic system.
+
+---
+
+## Visual Grammar
+
+The notation system — nodes, edges, and visual confidence encoding — that renders canonical relationships spatially.
+
+Visual grammar preserves the same meaning as the mathematical model while making the model readable as diagrams, symbols, and confidence cues.
+
+Visual Grammar is the specific notation instance of the Visual Projection category, in the same relationship Executable Notation holds to Executable Projection.
 
 ---
 
@@ -287,4 +356,4 @@ Visual reasoning is first-class when diagrams, symbols, and confidence cues pres
 
 Visual reasoning MUST NOT introduce a separate meaning from the model it depicts.
 
-Visual Reasoning is the practice associated with the Visual Projection category.
+Visual Reasoning is the practice of applying Visual Grammar, the notation instance of the Visual Projection category.

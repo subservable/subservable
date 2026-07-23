@@ -10,6 +10,10 @@ Provenance is metadata about an artifact.
 
 It is not part of the artifact itself.
 
+A provenance record is sufficient when it enables deterministic reconstruction as defined by the specification.
+
+Completeness is verified by [reconstruction](provenance-graph.md) rather than inspection.
+
 ---
 
 # Definition

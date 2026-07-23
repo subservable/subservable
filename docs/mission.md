@@ -109,11 +109,11 @@ Every projection teaches the same ideas through a different medium.
 
 Traditional software records describe state.
 
-Subservable records describe reconstruction.
+Subservable records describe reconstruction
 
 An Observation preserves what was observed.
 
-A Procedure preserves how meaning was derived.
+A Procedure defines how a value can be derived from an observation, producing that value together with its provenance.
 
 An Artifact preserves the resulting representation together with its associated uncertainty.
 

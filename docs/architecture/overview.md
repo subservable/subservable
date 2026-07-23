@@ -16,7 +16,6 @@ The following documents define the constitutional principles of Subservable:
 
 - [/docs/mission.md](/docs/mission.md)
 - [/docs/projection-architecture.md](/docs/projection-architecture.md)
-- [/spec/:version/glossary.md](/spec/0.1/glossary.md)
 
 These documents are versioned and frozen.
 
@@ -29,6 +28,10 @@ Changes to constitutional documents require:
 Implementation evolves beneath the constitution.
 
 The constitution does not evolve to accommodate implementation.
+
+Keep the glossary up to date with all terms
+
+- [/spec/:version/glossary.md](/spec/0.1/glossary.md)
 
 ## Philosophy
 
@@ -73,8 +76,6 @@ None is privileged over the others; each should be able to reconstruct the same 
 ---
 
 # Design Principles
-
-Subservable is built around six foundational principles:
 
 1. Immutable observations
 2. Deterministic procedures
@@ -181,19 +182,10 @@ Provenance Record
 # Multiple projections
 
 ```text
-Specification
-        │
-        ▼
-Immutable Model
-   ├── Mathematics
-   ├── English API
-   ├── Visualization
-   ├── Markdown
-   └── Runtime
+
 ```
 
-Everything is a projection of the same immutable model.
-No projection owns the truth.
+possible with system, how to represent and document..
 
 ---
 
