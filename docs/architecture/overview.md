@@ -75,7 +75,41 @@ None is privileged over the others; each should be able to reconstruct the same 
 
 ---
 
-# Design Principles
+# Mathmatical Axioms
+
+## Axiom 1 — Observations
+
+> Reality produces immutable observations.
+
+\[
+M=\{m_i\}
+\]
+
+## Axiom 2 — Estimation
+
+> Representations are derived from observations.
+
+\[
+\hat{x}=f(M;\theta)
+\]
+
+## Axiom 3 — Artifact
+
+> Every artifact is
+
+\[
+A=(\hat{x},H,\Delta,R)
+\]
+
+## Axiom 4 — Reconstruction
+
+\[
+R(\Delta(A))=A
+\]
+
+> Artifacts are losslessly reproducible.
+
+# Design Principlesn
 
 1. Immutable observations
 2. Deterministic procedures
