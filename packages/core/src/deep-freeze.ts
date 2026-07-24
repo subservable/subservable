@@ -1,10 +1,17 @@
 export function deepFreeze<T>(value: T): Readonly<T> {
-  if (value !== null && typeof value === "object") {
-    Object.freeze(value);
+  if (value === null || typeof value !== "object") {
+    return value as Readonly<T>;
+  }
 
-    for (const key of Object.keys(value)) {
-      deepFreeze((value as Record<string, unknown>)[key]);
-    }
+  if (Object.isFrozen(value)) {
+    return value as Readonly<T>;
+  }
+
+  Object.freeze(value);
+
+  for (const key of Reflect.ownKeys(value)) {
+    const child = (value as Record<PropertyKey, unknown>)[key];
+    deepFreeze(child);
   }
 
   return value as Readonly<T>;
