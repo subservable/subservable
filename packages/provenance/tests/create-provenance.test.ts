@@ -1,26 +1,28 @@
 import { describe, expect, it } from "vitest";
 import { createProvenance } from "../src/index.js";
 
-describe("createProvenance", () => {
-it("creates an immutable provenance record", () => {
-  const p = createProvenance({
-    inputRefs: ["obs:a"],
+
+const makeParam = (params = {}) => {
+  const now = Date.now();
+
+  return {
+    inputRefs: [`obs:${now}`],
     procedureId: "proc:identity",
-    outputRef: "artifact:a",
+    outputRef: `artifact:${now}`,
     parentRefs: [],
+    ...params,
+  };
+};
+
+describe("createProvenance", () => {
+  it("creates an immutable provenance record", () => {
+    const p = createProvenance(makeParam());
+
+    expect(Object.isFrozen(p)).toBe(true);
   });
 
-  expect(Object.isFrozen(p)).toBe(true);
-});
-
   it("creates identical ids for equivalent provenance", () => {
-
-    const params = {
-      inputRefs: ["obs:a"],
-      procedureId: "proc:identity",
-      outputRef: "artifact:a",
-      parentRefs: [],
-    };
+    const params = makeParam();
 
     const a = createProvenance({ ...params });
     const b = createProvenance({ ...params });
@@ -32,7 +34,18 @@ it("creates an immutable provenance record", () => {
   });
 
   it("includes procedure identity", () => {
-    throw new Error("Not implemented");
+    const proc_id = "proc:identity";
+
+    const params = {
+      inputRefs: ["obs:a"],
+      procedureId: proc_id,
+      outputRef: "artifact:a",
+      parentRefs: [],
+    };
+
+    const p = createProvenance(makeParam(params));
+
+    expect(p.procedureId).toBe(proc_id);
   });
 
   it("includes output reference", () => {
