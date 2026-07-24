@@ -1,77 +1,101 @@
+# `supporting-assets.md`
+
 # Supporting Assets
 
-## Mathematical Assets
+## Purpose
+
+Supporting assets exist to teach, explain, and invite understanding.
+
+They are explanatory lenses.
+
+They do not establish proof.
+
+---
+
+## Mathematical Foundation
 
 \[
 M
-\rightarrow
+\xrightarrow{f}
 P
-\rightarrow
+\xrightarrow{g}
 R
-\rightarrow
-\Delta
-\rightarrow
-\mathbb{U}_{\mathcal{G}}^{\circlearrowleft}
+\xrightarrow{\Delta}
+\mathbb U_{\mathcal G}^{\circlearrowleft}
 \]
 
 \[
-\mathcal{R}(\Delta(R))=R
+\boxed{
+\mathcal R(\Delta(R)) = R
+}
 \]
 
 ---
 
-## Visual Lenses
+## Bedrock Lens
 
-### Rock Lens
-
-econstructable unit
-↓
+```
+reconstructable unit
+        ↓
 layer
-↓
+        ↓
 sediment
-↓
+        ↓
 rock
-↓
+        ↓
 bedrock
-↓
-rock-age
+```
 
-### Kintsugi Lens
+Bedrock represents accumulated reconstructable structure.
 
-A seam does not hide damage.
-
-A seam preserves visible history.
-
-### Spectrum Lens
-
-Different lenses reveal different projections of the same preserved structure.
+Every layer remains replayable.
 
 ---
 
-## Semantic Lens
+## Kintsugi Lens
 
-A suffix is:
+Kintsugi preserves visible history.
 
-\[
-relationship \rightarrow projection
-\]
+The seam is not the proof.
 
-not:
+The seam invites observation.
 
-\[
-projection \rightarrow truth
-\]
+Relationships become clearer through preserved contrast rather than hidden repairs.
 
 ---
 
-## Asset Types
+## Language Lens
 
-Future supporting assets may include:
+Language may expose candidate relationships worthy of investigation.
 
-- math;
-- proof;
-- executable notation;
-- tests;
-- diagrams;
-- examples;
-- observations.
+Language alone does not establish semantic truth.
+
+Candidate relationships require independent replay and evaluation.
+
+---
+
+## Spectrum Lens
+
+Relationships often become visible at boundaries rather than within uniform regions.
+
+Supporting and contradicting observations may coexist during exploration.
+
+The boundary between them frequently reveals the most informative structure.
+
+---
+
+## Unknown Planning Principle
+
+Unknowns are:
+
+- planned for;
+- acknowledged;
+- preserved.
+
+Unknowns are not prematurely resolved.
+
+---
+
+## Teaching Principle
+
+A teaching lens is successful when it reveals existing mathematical structure without changing the mathematics itself.

@@ -1,43 +1,71 @@
+# `status.md`
+
 # Status
 
-Replayable relationship projection
+## Claim
 
-Current evidence:
+P-0001 — Semantic Relationship Projection
 
-- One complete replay has been preserved.
-- The process successfully refined a candidate interpretation.
+---
 
-Confidence:
-
-Early.
-
-Additional independent examples are required before this process should be
-considered mature.
-
---
-
-Claim:
-
-P-0001-semantic-suffix-elements
-
-State:
+## State
 
 Proposed
 
-Lifecycle:
+---
 
-Claim
-↓
-Witness Collection
-↓
-Evaluation
-↓
-Accepted / Revised / Superseded
+## Mathematical Foundation
 
-Axiom Changes:
+Stable.
+
+The reconstruction invariant remains unchanged.
+
+---
+
+## Current Evidence
+
+- Reconstruction theorem established.
+- Identity separated from semantic relationship.
+- One complete replay of the discovery process preserved.
+
+---
+
+## Confidence
+
+Reconstruction:
+
+Established.
+
+Semantic relationship projection:
+
+Early.
+
+The replay process has been demonstrated once.
+
+Additional independent examples are required before considering the workflow mature.
+
+---
+
+## Dependencies
+
+- Provenance validation
+- Reconstruction replay
+- Witness lifecycle
+
+---
+
+## Open Questions
+
+- Additional independent semantic projections.
+- Long-term witness accumulation.
+- Teaching lens validation through repeated replay.
+
+---
+
+## Axiom Changes
 
 None.
 
 This claim introduces no new axioms.
 
-It proposes a composable semantic projection.
+It proposes a replayable mechanism for representing semantic relationships while preserving reconstruction and provenance.

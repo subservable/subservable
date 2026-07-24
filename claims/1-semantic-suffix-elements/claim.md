@@ -1,83 +1,68 @@
-# Claim P-0001
-# Semantic Suffix Elements
+Claim P-0001
+Title
+Semantic Relationship Projection
 
-## Claim
+Claim
+Subservable represents semantic relationships as projections over preserved artifacts.
+A semantic relationship does not modify artifact identity.
+Instead, it provides an additional reconstructable view over existing preserved structure.
+[
+\text{identity} \ne \text{relationship}
+]
+Semantic relationships are evaluated through provenance and witnesses.
+The projection itself remains replayable.
+The underlying artifact remains immutable.
 
-Semantic suffix elements are composable projections of relationships
-within preserved artifacts.
-
-A suffix does not modify artifact identity.
-
-A suffix expresses a relationship discovered through provenance,
-witnesses, and accumulated context.
-
-\[
-artifact\ identity \neq artifact\ relationship
-\]
-
----
-
-## Foundation
-
-\[
+Foundation
+This claim builds upon the reconstruction pipeline.
+[
 M
-\;\xrightarrow{\;f\;}\;
+\xrightarrow{f}
 P
-\;\xrightarrow{\;g\;}\;
+\xrightarrow{g}
 R
-\;\xrightarrow{\;\Delta\;}\;
-\mathbb{U}_{\mathcal{G}}^{\circlearrowleft}
-\]
-
-with invariant:
-
-\[
+\xrightarrow{\Delta}
+\mathbb U_{\mathcal G}^{\circlearrowleft}
+]
+with invariant
+[
 \boxed{
-\mathcal{R}(\Delta(R))=R
+\mathcal R(\Delta(R)) = R
 }
-\]
+]
+Every semantic projection MUST preserve reconstructability.
 
----
+Constraints
+Semantic projections SHALL:
+preserve artifact identity;
 
-## Initial Semantic Elements
+preserve reconstructability;
 
-Candidate relationship projections:
+remain grounded in provenance;
 
-\[
-\text{-supported}
-\]
+remain replayable;
 
-\[
-\text{-unsupported}
-\]
+remain composable;
 
-\[
-\text{-contradicted}
-\]
+remain independently evaluable.
 
-\[
-\text{-uncertain}
-\]
+Semantic projections SHALL NOT:
+modify preserved observations;
 
-\[
-\text{-age}
-\]
+replace provenance;
 
----
+imply certainty beyond available witnesses.
 
-## Constraint
 
-Semantic suffix elements:
+Dependencies
+Observations
 
-- must preserve reconstruction;
-- must remain grounded in provenance;
-- must compose without changing identity;
-- must not claim authority beyond available witnesses.
+Provenance
 
----
+Reconstruction
 
-## Status
+Witness evaluation
 
+
+Status
 Proposed.
-
-Awaiting witnesses.
