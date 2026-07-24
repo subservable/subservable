@@ -14,7 +14,21 @@ it("creates an immutable provenance record", () => {
 });
 
   it("creates identical ids for equivalent provenance", () => {
-    throw new Error("Not implemented");
+
+    const params = {
+      inputRefs: ["obs:a"],
+      procedureId: "proc:identity",
+      outputRef: "artifact:a",
+      parentRefs: [],
+    };
+
+    const a = createProvenance({ ...params });
+    const b = createProvenance({ ...params });
+
+    expect(a.id).toBe(b.id);
+    for (const key of Object.keys(params)) {
+      expect((a as any)[key]).toEqual((b as any)[key]);
+    }
   });
 
   it("includes procedure identity", () => {

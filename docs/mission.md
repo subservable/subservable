@@ -153,7 +153,7 @@ Its responsibility is to preserve context, expose assumptions, and allow those p
 
 The goal is not to seek the unknowable.
 
-The goal is to avoid overlooking what careful observation may generously reveal.
+The goal is to avoid overlooking what careful observation may generously or eventually with enough obsers reveal.
 
 ---
 
