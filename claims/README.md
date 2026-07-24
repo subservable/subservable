@@ -1,0 +1,1 @@
+This folder contains the first claim intended to be inserted into Subservable. The claim intentionally minimizes assumptions. Supporting assets teach. Discovery preserves exploration. Witnesses record evidence. Status records current confidence. Future claims may refine or extend this work through provenance rather than modification.

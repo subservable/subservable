@@ -1,5 +1,21 @@
 # Status
 
+Replayable relationship projection
+
+Current evidence:
+
+- One complete replay has been preserved.
+- The process successfully refined a candidate interpretation.
+
+Confidence:
+
+Early.
+
+Additional independent examples are required before this process should be
+considered mature.
+
+--
+
 Claim:
 
 P-0001-semantic-suffix-elements
