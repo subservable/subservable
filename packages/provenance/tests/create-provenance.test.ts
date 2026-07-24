@@ -1,18 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createProvenance } from "../src/index.js";
-
-
-const makeParam = (params = {}) => {
-  const now = Date.now();
-
-  return {
-    inputRefs: [`obs:${now}`],
-    procedureId: "proc:identity",
-    outputRef: `artifact:${now}`,
-    parentRefs: [],
-    ...params,
-  };
-};
+import { makeParam } from "./provence-utils.js";
 
 describe("createProvenance", () => {
   it("creates an immutable provenance record", () => {
@@ -49,10 +37,36 @@ describe("createProvenance", () => {
   });
 
   it("includes output reference", () => {
-    throw new Error("Not implemented");
+
+    const id = "artifact:a";
+
+    const params = {
+      outputRef: id,
+    };
+
+    const p = createProvenance(makeParam(params));
+
+    expect(p.outputRef).toBe(id);
   });
 
-  it("deep freezes nested values", () => {
-    throw new Error("Not implemented");
+it("deep freezes nested values", () => {
+  const params = makeParam({
+    inputRefs: ["obs:a", "obs:b"],
+    parentRefs: ["prov:parent1"],
   });
+
+  const p = createProvenance(params);
+
+  expect(Object.isFrozen(p.inputRefs)).toBe(true);
+  expect(Object.isFrozen(p.parentRefs)).toBe(true);
+
+  // Mutation should fail silently (non-strict) or throw (strict mode)
+  expect(() => {
+    (p.inputRefs as any).push("obs:c");
+  }).toThrow(TypeError);
+
+  expect(() => {
+    (p.parentRefs as any)[0] = "prov:tampered";
+  }).toThrow(TypeError);
+});
 });

@@ -1,19 +1,26 @@
-import { describe, it } from "vitest";
+import { describe, it, expect } from "vitest";
+import { createProvenance } from "../src/index.js";
+import { makeParam } from "./provence-utils.js";
 
 describe("provenance parents", () => {
   it("supports zero parents", () => {
-    throw new Error("Not implemented");
+    const p = createProvenance(makeParam({ parentRefs: [] }));
+    expect(p.parentRefs).toEqual([]);
   });
 
   it("supports one parent", () => {
-    throw new Error("Not implemented");
+    const p = createProvenance(makeParam({ parentRefs: ["prov:a"] }));
+    expect(p.parentRefs).toEqual(["prov:a"]);
   });
 
   it("supports multiple parents", () => {
-    throw new Error("Not implemented");
+    const p = createProvenance(makeParam({ parentRefs: ["prov:a", "prov:b"] }));
+    expect(p.parentRefs).toEqual(["prov:a", "prov:b"]);
   });
 
   it("preserves parent ordering", () => {
-    throw new Error("Not implemented");
+    const p = createProvenance(makeParam({ parentRefs: ["prov:b", "prov:a"] }));
+    expect(p.parentRefs[0]).toBe("prov:b");
+    expect(p.parentRefs[1]).toBe("prov:a");
   });
 });
