@@ -38,3 +38,13 @@ is a claim supported by additional witnesses and evaluation.
 - Allow future reconstruction of why something was noticed.
 
 An observation may remain an observation indefinitely.
+
+## Status Vocabulary
+
+Observation status and Claim status are intentionally separate.
+
+Observations describe the lifecycle of noticed information before evaluation.
+
+Claims describe the lifecycle of evaluated assertions.
+
+Similar terms may appear in both contexts but do not imply identical semantics.
