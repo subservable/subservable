@@ -101,7 +101,7 @@ U
 
 ## Provenance
 
-A record describing how an artifact was produced.
+A deterministic record describing how an Artifact was produced from preserved Observations.
 
 Represented by:
 
@@ -109,7 +109,35 @@ Represented by:
 P
 \]
 
-Provenance is separate from the artifact.
+Provenance is separate from the Artifact.
+
+It does not preserve meaning, truth, or interpretation.
+
+It preserves deterministic reconstruction.
+
+Given the same preserved Observations and the same recorded Procedure, the same Artifact can be reproduced.
+
+Conceptually:
+
+```text
+Observation
+      │
+      ▼
+ Procedure
+      │
+      ▼
+ Artifact
+```
+
+Provenance records the deterministic relationship between these stages.
+
+A useful mental model is:
+
+> **Provenance is the thawing instructions for a preserved MAWberg item.**
+
+Just as thawing does not change what was preserved, replaying Provenance does not reinterpret an Observation—it reconstructs the Artifact that was previously produced.
+
+Meaning remains outside the deterministic core and belongs to Discovery rather than Provenance.
 
 ---
 

@@ -57,11 +57,12 @@ Similar vocabulary may appear in both contexts without representing identical st
 - Observation template
 - Claim template
 - P-0000 claim lifecycle tests
+- README.md Status Vocabulary
 
 ## Status
 
 \[
-\text{-exploratory}
+\text{-supported}
 \]
 
 ## Constraints
