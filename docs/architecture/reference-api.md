@@ -47,14 +47,11 @@ interface Artifact<Representation = unknown> {
 
 ```typescript
 interface Provenance {
+  id: string;
   inputRefs: string[];
   procedureId: string;
-  implementationHash: string;
-  runtimeHash?: string;
-  parameters: unknown;
-  parents: string[];
-  timestamp: string;
   outputRef: string;
+  parentRefs: string[];
 }
 ```
 

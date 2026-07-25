@@ -178,6 +178,7 @@
   },
   "active": "a3fef1598a591534",
   "lastOpenFiles": [
+    "node_modules/@types",
     "experiments/experiment-0000.md",
     "experiments/_template/experiment-0000.md",
     "experiments/A-0000.md",
@@ -212,7 +213,6 @@
     "claims/1-semantic-suffix-elements/claim.md",
     "claims/1-semantic-suffix-elements",
     "observations/0-0003.md",
-    "observations/0-0002.md",
     "observations/_template copy"
   ]
 }
