@@ -29,6 +29,44 @@ M
 
 Observations are preserved and never modified.
 
+An Observation records what was available to the system at a point in time.
+
+An Observation may include:
+
+- input conditions
+- context
+- events
+- measurements
+- actions or outputs produced by an observed system
+- resulting artifacts
+
+An Observation does not assert:
+
+- intent
+- internal state
+- causation
+- meaning
+- general behavior
+
+Recorded behavior is an Observation.
+
+A record that a system produced a particular output under particular
+conditions does not establish why the output occurred.
+
+Interpretation of Observations belongs to later layers:
+
+\[
+M \rightarrow Procedure \rightarrow Artifact
+\]
+
+and:
+
+\[
+Observations \rightarrow Claims \rightarrow Discovery
+\]
+
+Observations preserve possibility without prematurely assigning meaning.
+
 ---
 
 ## Procedure
@@ -267,6 +305,17 @@ The property that identical inputs and procedure identities produce identical ou
 ## Immutability
 
 The property that existing observations and artifacts cannot be modified.
+
+---
+
+## Premature Compression
+
+The process of collapsing distinct concepts too early because they appear
+structurally similar.
+
+Subservable avoids premature compression by preserving observations,
+testing equivalence, and only introducing shared primitives after evidence
+supports the relationship.
 
 ---
 

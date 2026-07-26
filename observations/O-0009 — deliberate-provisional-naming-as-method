@@ -1,0 +1,116 @@
+# O-0009 — deliberate-provisional-naming-as-method
+
+## Statement
+
+Using intentionally informal, goofy, or placeholder terminology for a new
+concept may be a deliberate method for letting underlying behavior emerge
+before the concept is prematurely formalized.
+
+This is not a claim that early or formal naming is wrong. It is an open
+observation: provisional naming keeps a concept revisable, and this may
+be valuable precisely because it defers judgment rather than making one.
+
+## Working Model
+
+A provisional name and a formal name may refer to the same underlying
+thing. Naming does not change the referent; it changes the confidence
+attached to it.
+
+\[
+x_{\text{provisional}} = x_{\text{formal}}
+\]
+
+\[
+\text{weight}_t(x) \rightarrow \text{weight}_{t+1}(x), \quad
+\text{weight}_{t+1} > \text{weight}_t
+\]
+
+Promotion from placeholder to formal name is not a transformation of
+\(x\). It is a change in accumulated weight behind \(x\), with \(x\)'s
+identity held fixed throughout.
+
+## Candidate Source of Weight
+
+\(\text{weight}\) is not currently a defined term in the system. It may
+not need to be a new primitive — it may already be expressible as
+accumulated provenance depth and independent witness count:
+
+\[
+\text{weight}(x) \approx f(\text{parentRefs depth of } x,\ \text{witness count of } x)
+\]
+
+This is a candidate reduction, not an established one. Whether existing
+provenance and witness mechanisms already capture everything intended by
+"weight" is an open question, not a conclusion.
+
+## Context
+
+Noted while reflecting on repeated use of informal or placeholder
+language throughout this project's observations. The deliberate
+informality is a known personal pattern: naming loosely as a check
+against a tendency toward overcommitting to an idea before it has been
+vetted — a practice applied to working with the system, not a claim
+about the system itself.
+
+## A Related Practice: Real-World Capture Moments
+
+Moments away from active work are being used as deliberate triggers to
+notice and flag ideas before they are lost, distinct from moments of
+focused formal design work. Informal, out-of-context noticing appears to
+be a real and recurring source of candidate material, prerequisite to
+formal design sessions rather than a replacement for them.
+
+## Governing Constraint
+
+The system exists to hold the unknown as unknown.
+
+Any convention — including this one — that quietly narrows what counts as
+valid, nameable, or worth tracking has reduced the scope of the MAW to
+only what is already known, which defeats its purpose.
+
+This observation does not establish a threshold for when a placeholder
+must become formal. That threshold is not defined here and may not be
+definable in general.
+
+## Minor Tenet (Unresolved)
+
+A recurring impression has surfaced, informally, that some high-level
+patterns in this project tend to resolve into a triadic shape ("a rule of
+three") that has not yet been identified or named.
+
+This is recorded as a hunch, not a rule. It has not been tested against
+any concrete case. It should not be treated as evidence of a real pattern
+until a specific instance can be named and checked, in the same manner as
+any other candidate observation.
+
+## Constraints
+
+No claim is made that all placeholder terminology should remain
+placeholder indefinitely.
+
+No threshold for promotion from placeholder to formal concept is
+established.
+
+`weight` is not established as a new primitive; it is offered as a
+possible reduction to existing provenance/witness concepts, pending test.
+
+The "rule of three" impression is not claimed to be real. It is preserved
+only as an unresolved hunch.
+
+No new primitive or lifecycle stage proposed.
+
+## Questions
+
+- Does layer depth plus witness count already fully capture what "weight"
+  was meant to describe, or is something left over?
+- What (if anything) should determine when a placeholder is promoted to a
+  concrete, named concept with its own timeline?
+- Is the "rule of three" impression a real recurring structure, or an
+  artifact of how humans (and language models) tend to pattern-match onto
+  triads regardless of whether one exists?
+
+## Status
+
+\[
+\text{-exploratory}
+\]

@@ -26,10 +26,10 @@ possibility and access to possibility.
 
 - Claim lifecycle bootstrap (O-0000) — demonstrates a preservation and
   replay path without requiring interpretation, though not yet retrieval
-  or indexings
+  or indexing
 - MAW/Bedrock vocabulary observations (O-0002)
-- demonstrates a preservation and replay path without requiring interpretation
 - Multi-lens selection discussion
+- Bluetooth/Arduino exploration about accessing preserved contents
 
 ## Status
 
