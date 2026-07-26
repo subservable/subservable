@@ -18,6 +18,26 @@ Its purpose is to observe which properties participate in identity generation an
 
 ---
 
+## Current State
+
+### Claim
+
+Equivalent immutable layers should produce equivalent identities.
+
+### Witness
+
+`packages/layering/tests/layering.test.ts`
+
+### Observation
+
+Equivalent structures currently produce different identities.
+
+### Unknown
+
+Whether identity should be structural, event-based, or hybrid.
+
+---
+
 ## Motivation
 
 Subservable relies on deterministic identity to preserve, compare, and reconstruct immutable structures.
@@ -128,13 +148,37 @@ No conclusion is drawn about whether this behavior is correct.
 
 ## Updated Understanding
 
-Current evidence suggests that layer identity is not currently determined solely by structural equivalence.
+The current Layer implementation treats identity as supplied input.
 
-Further investigation is required to determine whether:
+Identity is not currently derived from layer structure.
 
-1. supplied identifiers are intended identity inputs,
-2. supplied identifiers should be excluded from identity,
-3. layers represent events rather than values.
+Current model:
+
+\[
+createLayer(id, structure) \rightarrow Layer
+\]
+
+Possible future models:
+
+Structural identity:
+
+\[
+id = h(structure)
+\]
+
+Event identity:
+
+\[
+id = h(creation\ event)
+\]
+
+Hybrid identity:
+
+\[
+id = h(selected\ structural\ and\ contextual\ fields)
+\]
+
+The identity ownership model remains unresolved.
 
 ---
 

@@ -9,3 +9,17 @@ Primary artifact:
 Supporting artifact:
 
 - witness.md
+
+### A Flow  
+
+Work
+  ↓
+Observe
+  ↓
+Capture artifact
+  ↓
+Commit
+  ↓
+Stop
+  ↓
+Reflect / Rest
