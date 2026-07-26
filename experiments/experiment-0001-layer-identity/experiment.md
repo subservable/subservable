@@ -136,16 +136,6 @@ The witness is the automated test and observed output produced during implementa
 
 ---
 
-## Result
-
-Equivalent layer structures with different supplied identifiers produced different identities.
-
-This indicates that supplied identity currently participates in layer identity generation.
-
-No conclusion is drawn about whether this behavior is correct.
-
----
-
 ## Updated Understanding
 
 The current Layer implementation treats identity as supplied input.
@@ -198,3 +188,119 @@ Possible follow-up experiments:
 - test identity stability across serialization,
 - test identity stability across persistence and replay,
 - evaluate whether layer identity should be content-addressed.
+
+
+
+## Result
+
+Equivalent layer structures with different supplied identifiers produced different identities.
+
+This indicates that supplied identity currently participates in layer identity generation.
+
+No conclusion is drawn about whether this behavior is correct.
+
+---
+
+## Emerging Fruit
+
+The experiment exposed questions about identity semantics that extend beyond Layer implementation.
+
+These are not conclusions.
+
+They are candidate models produced by the experiment and preserved for future investigation.
+
+---
+
+## Fruit 1 — Identity Families
+
+The current system appears to contain multiple possible identity models.
+
+### Intrinsic Identity
+
+Identity emerges from what something is.
+
+Examples:
+
+- Observation
+- Artifact
+- Provenance
+
+Possible model:
+
+\[
+id(x)=H(content(x))
+\]
+
+Equivalent content produces equivalent identity.
+
+---
+
+### Historical Identity
+
+Identity emerges from an occurrence in history.
+
+Examples:
+
+- Layer
+- Commit
+- Decision
+- Branch point
+- Perspective
+
+Possible model:
+
+\[
+id(x)=H(event(x))
+\]
+
+Equivalent contents at different historical moments may produce different identities.
+
+---
+
+### Hybrid Identity
+
+A Layer may combine both structural and historical properties.
+
+Possible model:
+
+\[
+id(L)=H(structure(L), history(L))
+\]
+
+Where:
+
+- structure describes what the layer contains,
+- history describes how the layer came to exist.
+
+This possibility aligns with the principle:
+
+> preserve decisions, not just objects.
+
+A Layer may not represent a value.
+
+It may represent a preserved act of composition.
+
+---
+
+## Fruit 2 — Entity Identity Shape
+
+The experiment suggests a possible relationship between Subservable entities:
+
+```text
+Observation
+    |
+    | content-addressed identity
+    v
+Artifact
+    |
+    | derived from preserved inputs
+    v
+Provenance
+    |
+    | describes procedure and relationships
+    v
+Layer
+    |
+    | identity semantics unresolved
+    v
+Projection
