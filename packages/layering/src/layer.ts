@@ -1,6 +1,6 @@
 export interface Layer {
-  id: String;
-  parentRefs: String;
-  observationRef: String;
-  createdAt: String;
+  readonly id: string;
+  readonly parentRefs: readonly string[];
+  readonly observationRef: string;
+  readonly createdAt: string;
 }

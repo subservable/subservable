@@ -1,9 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { createLayer } from "../src/create-layer";
+import { createLayer } from "../src/create-layer.js";
 
 describe("createLayer", () => {
   it("creates an immutable layer", () => {
     const layer = createLayer({
+      createdAt: "now",
       parentRefs: [],
       observationRef: "obs-0001",
     });
@@ -15,6 +16,7 @@ describe("createLayer", () => {
 
   it("does not mutate a parent layer", () => {
     const parent = createLayer({
+      createdAt: "now",
       parentRefs: [],
       observationRef: "obs-parent",
     });
@@ -22,6 +24,8 @@ describe("createLayer", () => {
     const snapshot = structuredClone(parent);
 
     const child = createLayer({
+      id: "child",
+      createdAt: "later",
       parentRefs: [parent.id],
       observationRef: "obs-child",
     });
@@ -34,15 +38,33 @@ describe("createLayer", () => {
 
   it("creates identical ids for equivalent layers", () => {
     const a = createLayer({
+      createdAt: "now",
       parentRefs: [],
       observationRef: "obs-1",
     });
 
     const b = createLayer({
+      createdAt: "then",
       parentRefs: [],
       observationRef: "obs-1",
     });
 
     expect(a.id).toBe(b.id);
-  });   
+  });
+
+  it("creates different ids for different layer structure", () => {
+    const a = createLayer({
+      createdAt: "now",
+      parentRefs: [],
+      observationRef: "obs-1",
+    });
+
+    const b = createLayer({
+      createdAt: "now",
+      parentRefs: ["parent-1"],
+      observationRef: "obs-1",
+    });
+
+    expect(a.id).not.toBe(b.id);
+  });
 });
